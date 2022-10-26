@@ -12,3 +12,13 @@ module GamesDataController
     end
     data
   end
+
+  def save_games
+    data = []
+    @games.each do |game|
+      data.push({ multiplayer: game.multiplayer, last_played_at: game.last_played_at,
+                  published_date: game.publish_date.to_s })
+    end
+    File.write('games.json', JSON.generate(data))
+  end
+end
