@@ -29,3 +29,22 @@ CREATE TABLE labels (
     color VARCHAR(100),
     PRIMARY KEY(id)
 );
+
+CREATE TABLE sources (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+);
+
+CREATE TABLE musicalbum (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    publish_date DATE,
+    archived BOOLEAN,
+    on_spotify BOOLEAN DEFAULT 'f',
+    genre_id INT,
+    CONSTRAINT genre_fk FOREIGN KEY (genre_id) REFERENCES genre(id)
+);
+
+Create INDEX genre_id_asc ON items(genre_id ASC);
+
+CREATE INDEX genre_id_asc ON musicalbum(genre_id ASC);
