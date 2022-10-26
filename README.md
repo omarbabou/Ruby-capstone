@@ -25,15 +25,8 @@ for running the tests:
 
 1. Install project requirements `bundle install`
 
-1. Run the test using `rspec` in terminal
+2. Run the test using `rspec` in terminal
 
-
-### Setup
-
-1. Open Terminal.
-2. Navigate to your desired location to download the contents of this repository.
-3. Copy and paste the following code into the Terminal: `https://github.com/omarbabou/school-library.git`
-4. Type the following to go into the directory `cd school-library`.
 
 👤 Idrissa Makoba
 
