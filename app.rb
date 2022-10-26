@@ -1,5 +1,5 @@
-require_relative './options/add_music_album'
-require_relative './options/book_handler'
+require_relative './graphics/add_music_album'
+require_relative './graphics/book_handler'
 require './apps/game'
 require './apps/author'
 require './modules/game_module'
