@@ -20,16 +20,16 @@ def music_album_data
 end
 
 def convert_to_js(album)
-    File.write('album.json', '[]') unless File.exist?('album.json')
-    albums = JSON.parse(File.read('album.json'))
-    albums << { 'id' => album.id,
-                'publish_date' => album.publish_date, 'on_spotify' => album.on_spotify, 'genre' => album.genre.name }
-    File.write('album.json', JSON.generate(albums))
-  end
-  
-  def include_genre(album)
-    puts 'Name of genre: '
-    genre_name = gets.chomp
-    genre = Genre.new(genre_name)
-    album.add_genre(genre)
-  end
+  File.write('album.json', '[]') unless File.exist?('album.json')
+  albums = JSON.parse(File.read('album.json'))
+  albums << { 'id' => album.id,
+              'publish_date' => album.publish_date, 'on_spotify' => album.on_spotify, 'genre' => album.genre.name }
+  File.write('album.json', JSON.generate(albums))
+end
+
+def include_genre(album)
+  puts 'Name of genre: '
+  genre_name = gets.chomp
+  genre = Genre.new(genre_name)
+  album.add_genre(genre)
+end
