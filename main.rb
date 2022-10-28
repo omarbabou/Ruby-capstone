@@ -1,7 +1,7 @@
 require_relative './app'
 
 def main
-  puts "\nWelcome to School Library App!\n"
+  puts "\nWelcome to Catalog of My Things App!\n"
   app = App.new
   loop do
     app.display_menu
